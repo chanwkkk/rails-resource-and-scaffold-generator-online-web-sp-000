@@ -207,3 +207,25 @@ Processing by ArticlesController#edit as HTML
 Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.2ms)
 
 
+Started PATCH "/articles/2" for 75.71.7.56 at 2019-09-18 18:40:40 +0000
+Cannot render console from 75.71.7.56! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IeFyu/TYvfwzYviJNZRKctFrYpKzpaMyxQQn83AUnYVb0P2kV43jG2sy19MBoWWESWfBwsY6KyVjJD5QnD3fgw==", "article"=>{"title"=>"123", "body"=>""}, "commit"=>"Update Article", "id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "articles" SET "body" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["body", ""], ["updated_at", "2019-09-18 18:40:40.430276"], ["id", 2]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://178.128.13.85:44155/articles/2
+Completed 302 Found in 7ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/articles/2" for 75.71.7.56 at 2019-09-18 18:40:40 +0000
+Cannot render console from 75.71.7.56! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
